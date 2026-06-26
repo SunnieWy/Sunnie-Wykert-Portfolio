@@ -71,6 +71,7 @@ main ul, main a {
 main a {
     background-color: #290801;
     padding: 1rem 2rem;
+    border-radius: 10px;
 }
 
 main a:hover {
@@ -153,4 +154,61 @@ p {
 .contact img {
     width: 100%;
     max-width: 600px;
+}
+
+@media screen and (min-width: 800px){
+    body {
+        grid-template-columns: 150px 1fr;
+    }
+
+    header, nav, main, footer {
+        grid-column: 1/3;
+    }
+
+    nav ul {
+        display: flex;
+         justify-content: center;
+         gap: 2rem;
+    }
+
+    .card-row {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .card-row section {
+        flex-grow: 1;
+        flex-shrink: 1;
+        width: 100%;
+    }
+    
+    .contact {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-block: auto;
+    }
+        
+    .contact section {
+        margin-block: auto;
+    }
+
+    .contact img {
+        max-height: 80vh;
+        object-fit: contain;
+    }
+
+    .about {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-block: auto;
+    }
+
+    .about section {
+        margin-block: auto;
+    }
+
+    .about img {
+        margin-left: auto;
+        margin-top: 1.5rem;
+    }
 }
